@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Assessment3.Models.CourseModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eaf4f7;
+            height: 100vh;
+        }
+    </style>
+</head>
+<h1>Check Requirements for your Unit</h1>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Check Resource Requirements</h1>
+
+    <form action="/action_page.php" method="post" target="_blank">
+
+
+        <label>Choose a Course:</label>
+
+        <select>
+            <option>NIT123</option>
+            <option>CDE456</option>
+            <option>FGH789</option>
+            <option>IJK012</option>
+            <option>NIT123</option>
+            <option>CDE456</option>
+            <option>FGH789</option>
+            <option>IJK012</option>
+        </select><br><br>
+
+        <label>Choose Unit of this Course:</label>
+
+        <select>
+            <option>NIT123</option>
+            <option>NIT456</option>
+            <option>NIT789</option>
+            <option>NIT012</option>
+            <option>NIT123</option>
+            <option>NIT456</option>
+            <option>NIT789</option>
+            <option>NIT012</option>
+        </select><br><br>
+
+        <input type="submit" value="Check Requirement"><br><br>
+    </form>
+
+    <p>You have following Resources Required for this Unit</p>
+    <li>
+        <ol>Laptop: Windows Version</ol>
+    </li>
+
+</body>
+</html>

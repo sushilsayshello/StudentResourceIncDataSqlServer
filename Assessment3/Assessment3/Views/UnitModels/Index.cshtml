@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Assessment3.Models.UnitModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #eaf4f7;
+                height: 100vh;
+            }
+        </style>
+    </head>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitSpecification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceRequirements)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitSpecification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceRequirements)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UnitId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UnitId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UnitId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

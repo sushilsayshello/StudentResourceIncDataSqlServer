@@ -1,0 +1,59 @@
+﻿@model Assessment3.Models.ResourceModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #eaf4f7;
+                height: 100vh;
+            }
+        </style>
+    </head>
+
+<h1>Edit</h1>
+
+<h4>ResourceModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ResourceId" />
+            <div class="form-group">
+                <label asp-for="ResourceName" class="control-label"></label>
+                <input asp-for="ResourceName" class="form-control" />
+                <span asp-validation-for="ResourceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceType" class="control-label"></label>
+                <input asp-for="ResourceType" class="form-control" />
+                <span asp-validation-for="ResourceType" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ResourceAvailability" /> @Html.DisplayNameFor(model => model.ResourceAvailability)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceQuantity" class="control-label"></label>
+                <input asp-for="ResourceQuantity" class="form-control" />
+                <span asp-validation-for="ResourceQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
