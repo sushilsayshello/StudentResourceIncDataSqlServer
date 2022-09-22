@@ -14,6 +14,7 @@ namespace Assessment3.Models
         public string ResourceType { get; set; }
         public bool ResourceAvailability { get; set; }
         public int ResourceQuantity { get; set; }
+        
 
         //public ICollection<StudentResourceModel> StudentResourceModels { get; set; }
         
