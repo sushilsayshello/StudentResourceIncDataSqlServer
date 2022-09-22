@@ -9,6 +9,7 @@ namespace Assessment3.Models
     public class ResourceModel
     {
         [Key]
+        [Required(ErrorMessage = "ResourceID is required")]
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
         public string ResourceType { get; set; }
