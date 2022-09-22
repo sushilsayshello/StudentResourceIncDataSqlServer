@@ -10,9 +10,12 @@ namespace Assessment3.Models
     public class TeacherModel
     {
         [Key]
+        [Required(ErrorMessage = "TeacherID is required")]
         public int TeacherId { get; set; }
+        
         [Required(ErrorMessage = "FirstName is required")]
         public string FirstName { get; set; }
+        
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
@@ -21,6 +24,7 @@ namespace Assessment3.Models
         [DisplayName("ABC St NSW 2000")]
         [StringLength(1024)]
         public string Address { get; set; }
+        
         public string Contact { get; set; }
 
         //public int UnitForeignKey { get; set; }
