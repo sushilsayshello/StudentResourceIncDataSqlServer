@@ -10,6 +10,7 @@ namespace Assessment3.Models
     public class StudentModel
     {
         [Key]
+	[Required(ErrorMessage = "StudentID is required")]
         public int StudentId { get; set; }
         [Required(ErrorMessage = "FirstName is required")]
         public string FirstName { get; set; }
@@ -23,8 +24,8 @@ namespace Assessment3.Models
         public string Address { get; set; }
         public string Contact { get; set; }
         
-        [Required(ErrorMessage = "StudentID is required")]
-		[MinLength(7,ErrorMessage = "Must be atleast 7")]
+        
+		
 		public int StudentID { get; set; }
 
 		[Required(ErrorMessage = "LastName is required")]
