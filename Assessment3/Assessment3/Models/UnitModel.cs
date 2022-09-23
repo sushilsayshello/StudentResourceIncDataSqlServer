@@ -10,8 +10,11 @@ namespace Assessment3.Models
     {
         [Key]
         [Required(ErrorMessage = "UnitID is required")]
+        
         public int UnitId { get; set; }
+        
         public string UnitSpecification { get; set; }
+        
         public string ResourceRequirements { get; set; }
 
         //public TeacherModel TeacherModel { get; set; }
