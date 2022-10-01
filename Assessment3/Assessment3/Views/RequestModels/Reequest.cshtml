@@ -1,2 +1,83 @@
+@model Assessment3.Models.RequestModel;
 
+@{
+    ViewData["Title"] = "Reequest";
+}
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eaf4f7;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+<div class="text-center">
+    <h1 class="display-4">Request Resources</h1>
+    <p>Please fillup the request form and submit</p>
+</div>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="container">
+
+        <h1>Request Form</h1>
+
+        <form action="/action_page.php" method="post" target="_blank">
+
+            <label>Student Id:</label>
+            <input type="text"><br><br>
+
+            <label>Student Email:</label>
+            <input type="text"><br><br>
+
+            <label>Choose a Course:</label>
+
+            <select>
+                <option>NIT123</option>
+                <option>CDE456</option>
+                <option>FGH789</option>
+                <option>IJK012</option>
+            </select><br><br>
+
+            <label>Choose Unit of this Course:</label>
+
+            <select>
+                <option>NIT123</option>
+                <option>NIT456</option>
+                <option>NIT789</option>
+                <option>NIT012</option>
+            </select><br><br>
+
+            <label>Choose Resource:</label>
+
+            <select>
+                <option>Laptop</option>
+                <option>Tablet</option>
+                <option>Android</option>
+                <option>Iphone</option>
+            </select><br><br>
+
+            <label for="start">Request date:</label>
+            <input type="date"
+                   value="2020-07-22"
+                   min="2022-07-01" max="2025-07-31"><br><br>
+
+            <label for="week">Select a week:</label>
+            <input type="week"><br><br>
+
+            <textarea name="comment" form="usrform">Any comments...</textarea><br><br>
+
+            <input type="submit" value="Request"><br><br>
+        </form>
+
+        <p>Click on request so that your request will be sent to your unit teacher</p>
+        </div>
+</body>
+</html>
 
